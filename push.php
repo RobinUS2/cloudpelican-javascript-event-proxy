@@ -70,6 +70,6 @@ class CloudPelican_EventProxy
         return $default;
     }
 }
-
+set_time_limit(5);
 $instance = new CloudPelican_EventProxy();
 $instance->run();
