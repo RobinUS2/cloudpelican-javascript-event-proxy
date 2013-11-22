@@ -37,7 +37,12 @@ class CloudPelican_EventProxy
         $url = $this->_endPoint . '?' . http_build_query($queryParams);
         
         // Call the file
-        $content =  file_get_contents($url);
+        $ctx = stream_context_create(array('http'=>
+            array(
+                'timeout' => 5
+            )
+        ));
+        $content =  file_get_contents($url, false, $ctx);
         
         // Output the right headers
         header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
