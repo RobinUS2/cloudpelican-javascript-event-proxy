@@ -18,7 +18,7 @@ class CloudPelican_EventProxy
     * The CloudPelican endpoint
     * @var string
     */
-   private $_endPoint = 'https://app.cloudpelican.com/api/push/pixel';
+   private $_endPoint = 'https://api.cloudpelican.com/api/push/pixel';
    
    /**
     * Execute
